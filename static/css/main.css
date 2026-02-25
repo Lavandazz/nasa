@@ -1,0 +1,63 @@
+/* Навигация */
+.navbar {
+    padding: 0 150px 0 150px;
+    gap: 30px;
+    background: rgba(23,25,29,1)
+}
+.nav-item {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+#home {
+    background: black;
+}
+
+/* Первая секция с текстом */
+.hero {
+    padding: 60px 0;
+}
+
+.hero-title {
+    color: #ffffff;
+    font-size: 56px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.hero-subtitle {
+    color: rgba(195, 205, 221, 1);
+    font-size: 18px;
+    font-weight: 300;
+    text-align: center;
+}
+
+.earth-image {
+    width: 555px;
+    height: 457px;
+
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+}
+
+.custom-card {
+    padding: 20px;
+    height: 100%; /* чтобы все карточки были одинаковой высоты */
+}
+.card {
+    background-color: black;
+    padding: 30px;
+    gap: 30px;
+}
+
+.image-space {
+    width: 64px;
+    height: 64px;
+}
+
+.custom-card h3 {
+    padding: 16px 8px 16px 8px;
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
+}
