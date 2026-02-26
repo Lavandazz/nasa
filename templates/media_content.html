@@ -1,33 +1,31 @@
 {% load static %}
 
 {% block media-content %}
-    <section id="media">
-        <div class="modal fade" id="galleryModal" tabindex="-1">
-            <div class="modal-dialog modal-xl modal-dialog-centered">
-                <div class="modal-content bg-dark">
-                    <div class="modal-body">
-                        <div id="modalCarousel" class="carousel slide" data-bs-ride="false">
-                            
-                            <div class="carousel-inner">
-                                {% for slide in slides %}
-                                    <div class="carousel-item {% if forloop.first %}active{% endif %}">
-                                        <img src="{{ slide.image.url }}" class="d-block w-100" alt="{{ slide.title }}">
-                                    </div>
-                                {% endfor %}
-                            </div>
-                        
-                            <button class="carousel-control-prev" type="button" data-bs-target="#modalCarousel" data-bs-slide="prev">
-                                <span class="carousel-control-prev-icon"></span>
-                            </button>
-                            
-                            <button class="carousel-control-next" type="button" data-bs-target="#modalCarousel" data-bs-slide="next">
-                                <span class="carousel-control-next-icon"></span>
-                            </button>
-                        
-                        </div>
+
+    <section id="media" class="media">
+
+        <div class="container justify-content-center">
+        <h1 class="media-title">Фотографии</h1>
+            <div class="slider-for">
+                {% for slide in slides %}
+                    <div>
+                        <img src="{{ slide.image.url }}" class="img-fluid" alt="{{ slide.title }}">
                     </div>
-                </div>
+                {% empty %}
+                    <p>Нет изображений</p>
+                {% endfor %}
+            </div>
+        
+            <div class="slider-nav mt-3">
+                {% for slide in slides %}
+                    <div>
+                        <img src="{{ slide.image.url }}" class="img-fluid" alt="{{ slide.title }}">
+                    </div>
+                {% endfor %}
             </div>
         </div>
+
+
     </section>
 {% endblock %}
+

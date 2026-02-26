@@ -1,21 +1,31 @@
+#home {
+    background: black;
+}
+#media {
+    background: rgba(31, 36, 44, 1);
+}
+
 /* Навигация */
 .navbar {
     padding: 0 150px 0 150px;
     gap: 30px;
     background: rgba(23,25,29,1)
 }
+
 .nav-item {
     font-size: 16px;
     font-weight: 600;
 }
-
-#home {
-    background: black;
+.nav-link {
+    color: white;
 }
 
 /* Первая секция с текстом */
 .hero {
     padding: 60px 0;
+}
+.text-center {
+    max-width: 750px;
 }
 
 .hero-title {
@@ -33,21 +43,22 @@
 }
 
 .earth-image {
-    width: 555px;
-    height: 457px;
-
+    max-width: 555px;
+    max-height: 457px;
+    width: 100%;
     aspect-ratio: 1 / 1;
     object-fit: cover;
 }
 
-.custom-card {
-    padding: 20px;
-    height: 100%; /* чтобы все карточки были одинаковой высоты */
-}
+/*.custom-card {*/
+/*    padding: 20px;*/
+/*    height: 100%; !* чтобы все карточки были одинаковой высоты *!*/
+/*}*/
 .card {
     background-color: black;
-    padding: 30px;
-    gap: 30px;
+    padding: 20px;
+    color: white;
+    height: 100%;
 }
 
 .image-space {
@@ -55,9 +66,98 @@
     height: 64px;
 }
 
-.custom-card h3 {
+.card h3 {
     padding: 16px 8px 16px 8px;
     font-size: 16px;
     font-weight: 600;
     color: white;
+}
+
+.media {
+    padding-top: 60px;
+    display: grid;
+}
+.media-title {
+    color: white;
+    text-align: center;
+    padding: 16px 8px 16px 8px;
+}
+
+/* Основной слайдер */
+.slider-for img {
+    padding-top: 30px;
+    width: 100%;
+    height: 529px;
+    object-fit: cover;    /* обрезает сохраняя пропорции */
+}
+
+/* Навигационный слайдер */
+.slider-nav img {
+    width: 100%;
+    height: 300px;        /* высота превью */
+    object-fit: cover;
+    gap: 1rem
+}
+
+.slick-prev:before,
+.slick-next:before {
+    color: red !important;  /* цвет стрелок */
+}
+.slider-nav .slick-slide {
+    padding: 0 12px; /* отступ между слайдами */
+}
+
+
+@media (max-width: 768px) {
+    .navbar {
+        padding: 10px 20px; /* добавляем вертикальный отступ в мню */
+    }
+
+    /* Пункты меню по центру */
+    .navbar-collapse {
+        text-align: center;
+    }
+
+    .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.8%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    }
+    .hero-title {
+        font-size: 36px;
+    }
+    .hero-subtitle {
+        font-size: 16px;
+    }
+    .earth-image {
+        width: 100%;
+        height: auto;
+    }
+    .card h3 {
+        font-size: 13px;
+    }
+    .image-space {
+        width: 48px;
+        height: 48px;
+}
+}
+
+@media (max-width: 576px) {
+    #media .container {
+        max-width: 340px;
+    }
+    .slider-for img {
+        height: 200px !important;
+        /*max-width: 340px;*/
+    }
+    .slider-nav img {
+        height: 80px !important;
+    }
+    .slick-prev, .slick-next {
+        display: none !important;
+    }
+    .slider-nav .slick-slide {
+        padding: 0 5px;  /* отступы между превью */
+    }
+    .slider-nav {
+        margin-top: 10px;
+    }
 }
