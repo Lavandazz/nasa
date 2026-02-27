@@ -101,7 +101,19 @@
 
 .slick-prev:before,
 .slick-next:before {
-    color: red !important;  /* цвет стрелок */
+    padding: 10px;
+    color: red !important;
+    font-size: 30px !important;
+    opacity: 1 !important;
+}
+.slick-prev {
+    left: -70px!important;  /* отрицательное значение чтобы отодвинуть стрелку влево*/
+    z-index: 10;
+}
+
+.slick-next {
+    right: -40px!important; /* отрицательное значение чтобы отодвинуть стрелку вправо */
+    z-index: 10;
 }
 .slider-nav .slick-slide {
     padding: 0 12px; /* отступ между слайдами */
