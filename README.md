@@ -5,8 +5,7 @@
 
 ## Функциональность
 ### Главная страница 
-- отображен раздел «Фотографии» 
-с синхронизированным слайдером (Slick Slider).
+- отображен раздел «Фотографии» со слайдером (Slick Slider).
 
 - Полноэкранной галереей при клике на основное фото (Lightbox2).
 
@@ -14,11 +13,11 @@
 
 - Загрузка изображений через django-filer
 
-- Drag-and-drop сортировка записей с помощью django-admin-sortable2
+- Сортировка записей с помощью django-admin-sortable2
 
 - Отображение превью картинок в списке записей
 
-- Русскоязычные названия в админ-панеле.
+- Русскоязычные названия в админ-панели.
 
 ### Технологии
 - Python 3.12
@@ -34,16 +33,17 @@
 - Django Filer
 
 - Django Admin Sortable2
+- Lightbox2
 
 - Easy Thumbnails (зависимость django-filer)
 - CSS
 - JS
 
 
-## Клонируйте репозиторий
+## Клонирование репозитория
 ##### git clone https://github.com/Lavandazz/nasa.git
 
-## Запустите приложение
+## Запуск приложения
 ##### docker-compose up --build
 или
 ##### docker-compose build
@@ -57,11 +57,11 @@ http://localhost:8000
 http://localhost:8000/admin/
 
 ## Локальный запуск (без Docker)
-
-### Установите зависимости
-### Создайте .env файл
+### Установка зависимостей
+pip install -r req.pip
+### .env файл
 Пример .env файла в [.env_example](.env_example)
-### # Создайте суперпользователя
+### # Создание суперпользователя
 python manage.py createsuperuser
-### # Запустите приложение
+### # Запуск приложения
 python manage.py runserver

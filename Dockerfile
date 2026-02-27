@@ -18,10 +18,10 @@ RUN apk update && apk add --no-cache \
     mariadb-dev \
     pkgconfig
 
-COPY requirements.txt .
+COPY req.pip .
 
 RUN pip install --upgrade pip && \
-    pip install -r requirements.txt && \
+    pip install -r req.pip && \
     pip install gunicorn
 
 COPY . .
