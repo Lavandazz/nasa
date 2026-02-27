@@ -9,7 +9,9 @@
             <div class="slider-for">
                 {% for slide in slides %}
                     <div>
-                        <img src="{{ slide.image.url }}" class="img-fluid" alt="{{ slide.title }}">
+                        <a href="{{ slide.image.url }}" data-lightbox="gallery" data-title="{{ slide.title }}">
+                            <img src="{{ slide.image.url }}" class="img-fluid" alt="{{ slide.title }}">
+                        </a>
                     </div>
                 {% empty %}
                     <p>Нет изображений</p>
